@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>table태그로 이력서 양식 만들기</title>
-    <style>
+    <style >
         table td{
             border: solid 1px black;
             width: 100px;
             height: 30px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: auto;
+            
         }
     </style>  
 </head>
@@ -21,11 +21,11 @@
    
     <table>
         <tbody>
-            <tr>
+            <tr align = "center">
                 <td>지원분야</td>
                 <td colspan="8"></td>
             </tr>
-            <tr>
+            <tr align = "center">
                 <td >지원회사</td>
                 
                 <td colspan="2"></td>
@@ -36,7 +36,7 @@
                 
                 <td rowspan="4" colspan="2">사진</td>
             </tr>
-            <tr>
+            <tr align = "center">
                 <td >희망근무지</td>
                 
                 <td colspan="2"></td>
@@ -47,19 +47,19 @@
                 
                 
             </tr>
-            <tr>
-                <td >성명</td>
+            <tr >
+                <td align = "center">성명</td>
                 
-                <td colspan="2">한글</td>
+                <td colspan="2">(한글)</td>
                 
-                <td colspan="2">영문</td>
+                <td colspan="2">(영문)</td>
                 
-                <td colspan="2">한자</td>
+                <td colspan="2">(한자)</td>
                 
                 
             </tr>
             <tr>
-                <td colspan="2">주민등록번호</td>
+                <td colspan="2" align = "center">주민등록번호</td>
                 
                 <td colspan="5"></td>
                 
@@ -70,7 +70,7 @@
                 
             </tr>
             <tr>
-                <td >연락처</td>
+                <td align = "center">연락처</td>
                 
                 <td colspan="4">(휴대폰)</td>
                 
@@ -81,8 +81,8 @@
                 
             </tr>
             
-            <tr>
-                <td rowspan="6">학력</td>
+            <tr align = "center">
+                <td rowspan="6" >학력</td>
                 <td colspan="2">재학기간</td>
                 
                 <td colspan="2">학교</td>
@@ -94,7 +94,7 @@
             </tr>
             <tr>
                 
-                <td colspan="2"> . ~ . </td>
+                <td colspan="2" align = "center">&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;</td>
                 
                 <td colspan="2">고등학교</td>
                 
@@ -105,20 +105,9 @@
             </tr>
             <tr>
                 
-                <td colspan="2"> . ~ . </td>
+                <td colspan="2" align = "center">&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;</td>
                 
-                <td colspan="2">전문대</td>
-                
-                <td></td>
-                <td>/만점</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                
-                <td colspan="2"> . ~ . </td>
-                
-                <td colspan="2" rowspan="2">대학교<br>대학<br>(신입/편입)<br>(주간/야간)</td>
+                <td colspan="2" align = "">전문대</td>
                 
                 <td></td>
                 <td>/만점</td>
@@ -127,7 +116,18 @@
             </tr>
             <tr>
                 
-                <td colspan="2"> . ~ . </td>
+                <td colspan="2" align = "center">&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;</td>
+                
+                <td colspan="2" rowspan="2" align = "left">대학교<br>대학<br>(신입/편입)<br>(주간/야간)</td>
+                
+                <td></td>
+                <td>/만점</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                
+                <td colspan="2" align = "center">&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;</td>
                 
                 
                 
@@ -138,7 +138,7 @@
             </tr>
             <tr>
                 
-                <td colspan="2"> . ~ . </td>
+                <td colspan="2" align = "center">&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;</td>
                 
                 <td colspan="2">대학원<br>(주간/야간)</td>
                 
