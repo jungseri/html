@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Q. input태그와 labrl태그를 사용하여 간단한 회원가입 페이지를 생성하세요.</title>
+    
+</head>
+<body>
+    <form action="" method="POST"><!--form을 넣어야 페이지가 생성됨 서버로 데이터가 넘어감 get해놓으면 데이터가 주소로 넘어감-->
+        <label for="userid">아이디</label><br>
+        <input type ="text" placeholder = "@naver.com"><br>
+        <br>
+        <label for="userpw">비밀번호</label><br>
+        <input type="password" placeholder="password"><br>
+        <br>
+        <label for="user">이름</labelfor="userid"><br>
+        <input type ="name" placeholder="이름을 입력하세요"><br>
+        <br>
+        <label for="0000-00-00">생년월일</label><br>
+        <input type ="datetime-local" value="생년월일"><br>
+        <br>
+        <label for="age">나이</label><br>
+        <input type="number" placeholder="나이"><br>
+        <br>
+        <label for="manorwoman">성별</label><br>
+        남 <input type="checkbox" value="성별"><br>
+        여 <input type="checkbox" value="성별"><br>
+        <br>
+        <label for="useremail">본인 이메일</label><br>
+        <input type ="email" placeholder="@adress.com">
+        <br><br>
+        <label for="usertell">전화번호</label><br>
+        <input type="tel" placeholder="휴대폰 번호를 입력하세요.">    
+        <input type="button" value="인증하기"><br>
+        <input type="text" placeholder="인증번호를 쓰세요">
+        <input type="submit" value="확인" id="" name=""><br>
+        <br>
+        <label for="동의">개인정보에 동의하십니까?</label><input type="radio" value="동의"><br>        
+        <input type="submit" value="회원가입">
+        </label><input type="reset" value="취소">
+
+    
+
+
+        <!--input태그의 name속성은 서버에서 해당 데이터를 확인하기 위한 구분자 나중에 데이터만 넘어가기 때문에 그거를 구분해주기 위해서 네임드를 씀.-->
+        <!--id : 현재 페이지내에서 html 태그를 구분하는 유일한 값-->
+
+        <!--submit입력된 데이터를 서버로 전송-->
+        <!--reset 입력한데이터초기화-->
+
+
+
+        <label></label>
+
+
+
+
+    </form>
+    
+</body>
+</html>
