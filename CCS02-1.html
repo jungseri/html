@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2일차 1번파일</title>
+</head>
+
+*<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<!--외부서버에서 제공하는 폰트를 로드하여 사용하기-->
+
+<style>
+/*font-family : 글꼴을 설정하는 CSS속성, 자신의 컴퓨터에 설치 되어 있는 글꼴명을 사용하면 됨*/
+/*자신의 컴퓨터에 설치되어 있는 글꼴명을 그대로 사용하면 됨*/
+/*[]는 글꼴을 옵션으로 사용할 수도 안할수도 있다는 의미*/
+/*글꼴은 여러개를 동시에 사용이 가능함*/
+/*[]글꼴은 (,)를 사용하여 여러개를 동시에 사용이 가능하며, 순서대로 사용가능함.*/
+/*''나 ""를 사용하며 글꼴명에 공백문자가 들어간것도 사용 가능*/
+/*@font-face*/
+/*외부서버에서 지원하는 폰트가 아닐경우 자신이 직접 폰트를 업로드 하여 해당 폰트를 사용자가 사용하게 하는 방식*/
+/*폰트는 저작권이 있기 때문에 잘못 사용시, 무료폰트가 아닌 폰트를 업로드 하여 사용하게 되면 법적 문제가 발생 할 수 있음*/
+
+
+/*font size : 글자 크기를 변경하는 CSS속성*/
+/*기본단위는 px, web 기본 글자는 16px
+em(기본단위의 배수를 가지고 크기를 결정(1em, 16px),px(픽셀수를 가지고 크기를 설정(절대값, 기본단위),%(기본 단위를 백분율로 표시하여 크기를 설정)를 많이씀.*/
+*{
+    font-family: 'Noto Serif KR', 'Do Hyeon', serif;
+}
+
+@font-face {
+    font-family: 'Cute Font';
+    src: url('CuteFont-Regular.eot');
+    src: url('CuteFont-Regular.eot?#iefix') format('embedded-opentype'),
+        url('CuteFont-Regular.woff2') format('woff2'),
+        url('CuteFont-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ng-font{
+    font-family: 'Do Hyeon';
+}
+
+.w-font {
+    font-family: 'Cute Font';
+}
+p{
+    pont size: 30px;
+}
+
+</style>
+<body>
+    <p>브라우저 기본 글꼴 사용</p>
+    <p class="ng-font">나눔고딕 웹 폰트 사용</p>
+    <p class="w-font"> 직접 업로드한 웹 폰트 사용</p>
+
+
+
+    <br><hr><br>
+<p class="fontpx">기본글꼴 px 단위로 표현</p>
+</body>
+</html>

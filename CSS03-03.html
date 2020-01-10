@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>연습문제</title>
+
+    <style>
+    #div01{
+    width: 650px; /*widgh : 500px : div의 가로너비 설정*/
+    /*padding:10px; : div의 내부 공간을 10px로 지정*/
+    margin: 0 auto; /*widgh : 500px*//*중앙정렬!*/
+    font-family: "맑은고딕, 돋움";
+    }
+
+
+    #div01 > .nobullet{
+
+/*☆★따로 태그 만들 필요 없이 그냥 태그 가져오면 되는 거였음!!!!!!!☆★*/
+/*정답 : #div01 ul {~~~~}
+ ul 스타일을 none으로 변경*/
+
+    list-style-type: none;
+    list-style-position: inside;
+    line-height: 2;    
+    }
+
+    .nobullet .class{ 
+
+
+        /*자손선택자를 사용하여 #div01의 자손태그중 class 명이 class인 태그 선택*/
+        /*p태그의 기본 크기가 16p임*/
+
+
+        /*자손태그와 자식태그 : 자손태그는 바로 아래에 있는 태그를 끌어오는 것이라서 바로 아래에 있는게 아니라면 실행되지 않음.
+        ex) 여기서 class태그는 div>h1>ul>il>span안에 있어서 엄청 밑에 소속되어 있다. 이경우 자손태그로 설정 할 수 없다. 해서 
+        자식태그로 그냥 바로 ".소속되어있는태그 와 연결할 .태그로 자식 태그"를 써야한다
+        
+        
+        가능한 자손태그 "#div"> ".nobullet" 한단계 아래임.
+        
+        자식태그 ".nobullet .class"*/
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #ad3000;
+    }
+
+#div01 h1 {
+    font-weight: 700; 
+    background-color: darkgrey;
+    color: #ffffff;
+    text-shadow: 3px 2px 5px #000000;
+    text-align: center;
+}
+
+#div02{
+
+padding: 10px;
+/*내부공간지정*/
+margin-right: 20px;    
+    font-family: "맑은고딕, 돋움";       
+}
+
+#div02 .h2 {
+font-size: 17px;
+}
+
+#div02 .p {
+    float: left ;
+    
+    /*☆★ float : 그림옆에 텍스트를 사용 할 수 있도록 설정하는 CSS설정 
+이미지를 왼쪽에 두고 텍스트를 오른쪽에 두도록 설정☆★?????????????????????????????????????????????????????
+*/
+    font-size: 16px;
+    line-height: 25px;
+}
+#div02 .accent {
+    font-weight: bold;
+    color: red;
+
+}
+
+
+</style>
+
+</head>
+<body>
+    <div id="div01">
+        
+    <h1>최신 웹 디자인 트렌드</h1>
+    <ul class="nobullet">
+        <li><span class="class">반응형 웹 디자인</span> - 다양한 화면 크기에 최적화 하다</li>
+        <li><span class="class">플랫 디자인</span> - 입체에서 평면으로</li>
+        <li><span class="class">풀 스크린 배경</span> - 콘텐츠에 집중</li>
+        <li><span class="class">원 페이지 사이트</span> - 한 페이지에 모든 내용을 담다</li>
+        <li><span class="class">패럴랙스 스크롤링</span> - 동적인 효과로 강한 인상을!</li>
+        <li><span class="class">웹 폰트</span> - 웹 타이포 그래피를 받쳐주는 기술</li>
+    </ul>
+
+</div>
+
+<div id="div02">
+    <img src="../images/002.jpg">
+    <div></div>
+<h2>웹디자인 트렌드를 따라잡는 비법 대 공개</h2>
+<p> 그래픽 프로그램으로 웹 디자인 요소를 일일이 만들어 웹사이트를 제작하는 시대는 지났다 <br>
+    이제 모바일, 태블릿, 피시등 멀티 디바이스에 한번에 적용 될 수 있는 웹 디자인 방법을 알아야 한다
+    <br>바로 코딩을 이용한 웹 디자인이다<br>
+<span class="accent">이 책은 html과 CSS에 대한 기초적인 내용만 알고 있다면 누구든 쉽게 코딩으로 <br>
+    여러기기에 대응 할 수 있는 웹 디자인을 만들 수 있도록 기획 되었다</span><br>
+    jquery플러그인을 가져다 사용할 수 있는 방법을 소스 한줄 한줄 자세하고 친절하게 설명해 놓았으니까
+</p>
+
+
+
+
+
+    </div>
+</div>    
+</body>
+</html>

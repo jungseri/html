@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 2일차</title>
+
+    <!--외부 CSS파일을 로드할 경우 html 내부 style 태그보다 윗쪽에 입력함.-->
+
+
+
+
+
+
+
+    <style>
+    /* CSS 선택자 */
+    /* CSS속성을 적용하기 위하여 지정한 html 태그를 정확히 선택하기 위한 구분자 */
+    /* 전체 선택자 */
+    /* 해당 페이지의 모든 html 태그를 선택하는 선택자 */
+    /* 주로 해당 페이지의 전체 스타일을 적용하기 위해서 가장 먼저 사용됨 */
+    /* (*)기호를 사용함 */
+
+    *{
+    font-family: '나눔고딕';/*테두리선 외부공간 설정*/
+    }
+    
+    /*태그선택자*/
+    /*html 태그명을 그대로 사용하는 선택자*/
+    /*해당 페이지에서 지정한 html 태그명과 같은 모든 태그를 선택하는 선택자*/
+    /*지정한 html태그에 동일한 스타일을 적용하기 위해서 사용함*/
+
+        h2{
+            color : blue;
+        }
+        /*폰트 기본 사이즈는 16인데 픽셀을 더 줄여서 작아짐*/
+
+        .box{
+            border: 2px solid green;
+            width: 300px;
+            height: 200px;
+            padding: : 15px;
+        }
+        .box:hover{
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+        }
+
+
+
+        p{
+        font-size: 12px;
+        margin: 12px;
+        font-family: '바탕체';
+        }
+
+        /*Class선택자*/
+/* 다른 종류의 html태그를 하나의 그룹으로 묶어서 CSS속성을 적용하는 선택자 */
+/* (.)기호를 사용함 */
+/*html 태그에 class 속성을 사용하여 그룹명을 지정함.*/
+/*html 태그명과 함께 사용하는 클래스 선택자를 사용할 수 있음*/
+
+.redtext{
+    color :red;
+}
+
+h2.redtext { /*태그선택자+class선택자 : html태그명과 함께 클래스, 선택자를 동시에 사용할 수 있음*/
+    margin-left: 50px;
+    font-weight: lighter;
+}
+/*ID선택자*/
+/*지정한 html의 id속성값 기준으로 html 태그를 선택하는 선택자*/
+/*#기호를 사용함*/
+/*해당 html 페이지에서 id는 유일한 값을 가지고 있기 때문에 단 하나의 태그를 선택하는 선택자*/
+
+#purpletext {
+    background-color: blueviolet;
+}
+
+
+/*그룹선택자*/
+/*동일한 CSS속성을 적용할때 해당 선택자들을 모아서 한번에 입력할때 사용하는 선택자*/
+/*선택자의 종류는 상관없이 ,로 구분하여 여러개의 선택자를 동시에 입력 할 수 있음*/
+
+h1, h2, h3, h4, h5, h6, .redtext, .purpletext {
+text-align: center !important;
+}
+
+div > h3{ /*자식태그 설정*/
+    text-align: right ;
+}
+/* !improtant 속성값 : CSS 속성을 상속받아서 사용할 경우 나중에 실행되는 속성이 기존의 속성을 
+무시하고 실행되게 하는 경우가 발생하는데 !important 속성값을 사용하게 되면 기존의 속성이 무시되지 않고 나중에 실행되는 속성이 무시됨*/
+body{
+color: blueviolet;
+}
+h2{
+    font-size: 20px;
+    color:brown;
+}
+
+
+
+</style>
+</head>
+<body>
+    <h1 class="redtext">블루베리에 대한 연구</h1>
+    <h2 id="purpletext">블루베리와 향산화 효능</h2>
+    <p class="redtext">블루베리는 ...합니다.</p>
+<h2 class="redtext">블루베리의 노화</h2> 
+<!--태그+클래스 선택자인 경우지만, 선택자 자체에서 태그를 넣은 것이지 h2태그 선택자의 기능이 중복되지 않는 것은 후에 선택자 기능이 적용되는 성격탓. 하나만 적용됨 섞이지 않고-->
+    <p>USDA---발견하였습니다.</p>
+
+    <div>
+        <h3>
+            대통령은 법률이 정하는 바에 의하여 훈장 기타의 영전을 수여한다. <!--부모태그(div)의 태그를 자식태그인(p)가 상송받음-->
+        </h3>
+    </div>
+
+
+
+    <br>
+    <hr>
+    <br>
+
+    <h1>CSS</h1>
+    <h2>웹 문서의 디자인과 내용을 분리합니다.</h2>
+    <p>웹 표준에 의한 웹 문서는 디자인과 내용이 분리되어 있습니다.</p>
+    <p>내용은 html을 이용해 고성하고 디자인은 CSS를 이용해 꾸미는 것입니다.</p>
+
+
+    <div class="box">mouse over</div>
+</body>
+</html>

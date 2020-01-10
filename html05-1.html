@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html 5일차 1번파일</title>
+
+    <style>
+    .container {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>상품주문서</h1>
+    <form>
+    <fieldset>
+
+        <legend>개인정보</legend>
+    <ul>
+        <li>
+        <label for="name">이름</label>
+            <input type="text" id="uname" placeholder="여백없이 입력">        
+        </li>
+        <li>
+            <label for="tel">연락처</label>
+                <input type="tel" id="tel" placeholder="연락가능한 번호">        
+        </li>
+    </ul>
+</fieldset>
+<fieldset>
+    <legend>배송지 정보</legend>
+    <ul>
+        <li>
+            <label for="adress" class="title">주소</label>
+            <input type="text" size="40" id="adress" required>
+        </li>
+        <li>
+            <label for="tel" class="title">전화번호</label>
+            <input type="tel" id="tel" required>
+        </li>
+        <li>
+            <label for="text">메모</label=>
+            <input type="text">
+        </li>
+    </ul>
+</fieldset>
+    <fieldset>
+        <legend>주문 정보</legend>
+        <ul>
+            <li>
+                <input type="checkbox">
+                <label for="number">과테말라 안티구아(100g)</label>
+                <input type="number" ui="메뉴1" placeholder="0">개
+                
+            </li>
+            <li>
+                <input type="checkbox">
+                <label for="number">인도네시아 만델링(100g)</label>
+                <input type="number" placeholder="0">개
+                
+            </li>
+            <li>
+                <input type="checkbox">
+                <label for="number">탐라는도다(블렌딩_(100g)</label>
+                <input type="number" placeholder="0">개
+                
+            </li>
+        </ul>
+    </fieldset>
+    <label for="submit">주문하기</label>
+<input type="submit">
+<label for="ret">주문하기</label>
+<input type="submit">
+</form>
+</body>
+</html>
