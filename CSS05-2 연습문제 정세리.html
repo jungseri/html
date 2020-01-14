@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 5일차 2번 파일</title>
+
+    <style>
+        /* 연습문제 1 */
+.box1{
+    width: 200px;
+    height: 200px;
+    border-style: solid; /*border 사이즈랑 컬러랑 다같이 써야 나옴*/
+    border-color:black
+    border-width: 5px 20px 10px 15px;}
+
+        /* 연습문제 2 */
+        #div02 a:link, #div02 a:visited {
+            color: black;
+            text-decoration: none;
+        }
+        nav ul li {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 연습문제 1 -->
+<div id ="div01">
+    <div class="box1"></div>
+</div>
+    <br><hr><br>
+
+    <!-- 연습문제 2 -->
+    <div id="div02">
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
