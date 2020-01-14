@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+<style>
+    /*우리가 원한건 화면이 줄어들어도 비율이 같도록!*/
+
+
+#div01::after{
+    clear: both;
+    display:table;
+    content: ;
+}/*float속성을 뺴고 한다.*/
+
+
+.box {
+    /*한 라인의 크기에서 30%의 너비를 계산학여 너비를 적용*/
+    width: 30%;
+    float: left;
+    padding: 5px;
+     /*너비와 높이의 크기를 테두리 선을 기준으로 설정.*/
+     box-sizing: border-box;/*화면이 작아져도 그대로 유지함!!border-box : 테두리를 기준으로 크기를 정합니다.*/
+     overflow :auto;
+     /*overflow
+     hidden(박스를 넘어간 부분은 보이지 않습니다.),
+     visible(박스를 넘어가도 보여줍니다.),
+     scroll(박스를 넘어가든 넘어가지 않든 스크롤바가 나옵니다.),
+     auto(박스를 넘어가지 않으면 스크롤바가 나오지 않고, 박스를 넘어갈 때에는 스크롤바가 나옵니다.),
+     initial(기본값으로 설정합니다.),
+     inherit(inherit : 부모 요소의 속성값을 상속받습니다.)*/
+}
+/*컨텐츠 크기로 사이즈가 나오기 때문에 저렇게나온것.*/
+
+img{
+    width: 100%;  /*이거 안하면? 원래크기 최대로 나옴?*/
+   
+}
+
+#div02{
+    background: #bbbbbb;
+width: 1100px;
+    height: 240px;
+    padding: 20px;
+    margin: 0 auto;
+    background: white;    
+}
+img {
+    width: 300px;
+    height: 200px;
+}
+
+#div02> .img1{
+    width: 300px;
+    height: 200px;    
+    float: left;
+    margin-left: 20px;
+    background: white;
+}
+#div02> .img2{
+    width: 300px;
+    height: 200px;    
+    float:left;
+    margin-left: 20px;
+    background: white;
+}
+#div02> .img3{
+    width: 300px;
+    height: 200px;    
+    float: right;
+    margin-right: 20px;
+    background: white;
+}
+
+</style>
+
+ </head>
+ <body>
+    <div id="div01">
+        <div class="box"><!--테두리를 5px주기위해 만듬--><img src="./img_5terre.jpg" alt="" ></div>
+        <!--각이미지 들어가는 설정이 같기 때문에 각 다른 태그를 넣을 필요는 없음-->
+        <div class="box"><img src="./img_forest.jpg" alt=""></div>
+        <div class="box"><img src="./img_mountains.jpg" alt="" ></div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div id="div02">
+        <div class="img1"><img src="./img_5terre.jpg" alt="" ></div>
+        <div class="img2"><img src="./img_forest.jpg" alt=""></div>
+        <div class="img3"><img src="./img_mountains.jpg" alt="" ></div>
+    </div>
+        <br>
+    
+    <br><br><br><br><br><br><br>
+
+        <br>
+    
+    <br><br><br><br><br><br><br>
+    
+ </body>
+ </html>
+ 
+ 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css06-2</title>
+<style>
+div{
+    border: 3px solid red;
+    padding: 10px;}
+img{
+    width: 300px;
+    height:200px;
+    
+}
+#div01 >p{
+    clear: both;
+}   /*p가 삭제해 줘야함. float clear*/
+#div02 img{    
+    float:left;}
+     /*영역을 벗어나는 컨텐츠의 화면 출력 방식을 설정하는 CSS속성*/
+    /*overflow: hidden*/
+/*float 사용시 부모 태그 영역을 벗어나는 상황이 발생되는데, 이때 부모태그 영역을 벗어나는
+것을 막는 방법 2가지
+1) 부모태그에 overflow:auto를 사용하는 방법 (스크롤이 발생할 가능성이 있음.)
+2) 부모태그에 ::after를 추가하여 화면에 그려진 이후 동작을 설정하는 방법<추천>★☆*/
+/*clear: both, display content 속성을 사용해야함*/
+
+
+#div02 {overflow: auto;}
+
+#div03 img{    
+    float:left;}
+
+#div03::after{
+    clear:both;
+    display:table;
+    content:"";
+    }
+#div04{}
+
+
+</style>
+
+
+</head>
+
+<body>
+    <div id="div01">
+        <img src="001.jpg" alt="" >
+        <p>위원은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</p>
+
+        <p>대통령은 국무회의의 의장이 되고, 국무총리는 부의장이 된다.</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div id="div02">
+        <img src="001.jpg" alt="" >
+        <p>위원은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</p>
+
+        <p>대통령은 국무회의의 의장이 되고, 국무총리는 부의장이 된다.</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div id="div03">
+        <img src="001.jpg" alt="" >
+        <p>위원은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</p>
+
+        <p>대통령은 국무회의의 의장이 되고, 국무총리는 부의장이 된다.</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+   
+</body>
+</html>

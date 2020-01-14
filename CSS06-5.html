@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS06-5</title>
+    <style>
+    /*visibility*/
+    /*html 태그를 화면에 보이지 않게 숨기는 설정을 하는 CSS 속성, html 태그를 화면에 보이지 않게 숨김, 숨겨진 html태그의 영역은 그대로 존재함*/
+    /**visivle(기본값), hidden, collapse*/
+    /*collapse: 표에서 사용시 서로 겹치도록 설정, 그 이외의 영역에서는 hidden과 동일한 효과 */
+    
+    /*opacity: 0,0과 비슷한 효과*/
+     /*display:none과는 다른 형태 (display의 none은 html 태그의 영역이 존재하지 않음.)*/
+#div01 .box{
+    float: left;
+    width: 33%;
+    padding: 5px;
+}
+#div01 .box{
+    float: left;
+    width: 33%;
+    padding:5px;
+    box-sizing : border-box;
+}
+
+
+#div01 img{width: 100%;}
+
+.invisivle1{
+    opacity: 0.5;
+ /* display:none;
+    visibility:hidden;*/
+}
+/*z-index : html적층 구조를 설정하는 Css속성*/
+/*html 태그는 먼저 입력된 순서부터 아래에 깔리는 형태임.(나중에 입력되면 위로 올라간단 소리? 근데 z-index를 사용시 적층 레벨을 사용자가 직접 입력 할 수 있음.*/
+.invisivle2{
+    display:none;
+}
+.invisivle3{
+    visibility:hidden;}
+#div02{
+    width: 500px;
+    height: 500px;
+    background-color: darkcyan;
+    border: 2px solid black;
+    position: relative;
+}
+#div02 .box{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+.red{
+    background-color: red;
+    top:0px;
+    left:0px;
+    z-index: 10;}/*z-index 값은 정수를 사용(0~9999), 숫자가 클수록 상위에 올라감, 디자이너는 보통 9999값을 넣어서 올려버림*/
+.green{
+    background-color: green;
+    top:50px;
+    left:50px;
+    z-index: 5;}
+
+    .blue{
+        background-color: blue;
+    top:100px;
+left:100px;
+z-index: 0;}
+</style>
+</head>
+<body>
+    <div id="div01">
+        <div class="box"><img src="./img_5terre.jpg" alt="" class="invisivle1" ></div>
+        <div class="box"><img src="./img_forest.jpg" alt="" class="invisivle2"></div>
+        <div class="box"><img src="./img_mountains.jpg" alt=""  class="invisivle3"></div>
+    </div>
+        <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+        <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+      
+
+        <div id="div02">
+            <div class="box red"></div>
+            <!--각이미지 들어가는 설정이 같기 때문에 각 다른 태그를 넣을 필요는 없음-->
+            <div class="box green"></div>
+            <div class="box blue"></div>
+        </div>
+
+
+</body>
+</html>
