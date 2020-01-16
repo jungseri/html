@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css 8일차 5번파일</title>
+    <style>
+    /*가상 클래스 선택자*/
+    /*사용자의 사용에 따라서 선택 여부를 확인해 선택하는 선택자*/
+    /*:link : 아직 방문하지 않은 링크를 선택하는 선택자*/
+    /*:visited : 이미 방문한 링크를 선택하는 선택자*/
+    /*:active : 웹 요소를 활성화(동작) 중일 경우 선택하는 선택자*/
+    /*:hover : 마우스 포인터가 html 요소위에 있을 경우 선택하는 선택자*/
+    /*:focus : html 태그에 초점이 맞춰졌을때 선택하는 선택자*/
+    #div01 a:link, #div01 a:visited{
+        font-size: 14px;
+        padding: 10px; 
+        text-decoration: none;
+              
+    }
+    #div01 a:hover, #div01 a:focus{
+        background: yellowgreen;
+        color:white;
+    }
+    #div01 a:active{
+        background: yellow;
+    }
+    input:checked + span{
+        color: tomato;
+    }
+   
+  /*:checked*/
+  /*checkbox, radiobox에서 해당 항목이 선택되어 있느지 확인하여 선택하는 선택자*/
+
+  /*::before, ::after: 지정한 요소의 앞뒤를 선택하여 컨텐츠 추가*/
+ #div03 li{
+      margin: 20px;
+  }
+
+  #div03 li.hot::after{
+    
+      content: "NEW!!";
+      font-size: x-small;
+      padding: 2px 4px;
+      margin: 0 10px;
+      border-radius: 2px;
+      background: red;
+      color: white;
+  }
+  #div03 li{
+      margin: 20px;
+  }
+
+  #div03 li.hot::before{
+    
+      content: "NEW!!";
+      font-size: x-small;
+      padding: 2px 4px;
+      margin: 0 10px;
+      border-radius: 2px;
+      background: blue;
+      color: white;
+  }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <ul>
+            <li><a href="#">이용객실</a></li>
+            <li><a href="#">객실소개</a></li>
+            <li><a href="#">예약방법 및 요금</a></li>
+            <li><a href="#">에약하기</a></li>
+        </ul>
+    </div>
+    <div id="div02">
+        <form>
+            <fieldset>
+                <legend>신청과목</legend>
+                <p>이달에 신청할 과목을 선택하세요.</p>
+                
+                <input type="radio" name="subject" value="speaking">
+                <span>회화</span>
+                <input type="radio" name="subject" value="grammer">
+                <span>문법</span>
+                <input type="radio" name="subject" value="whiting">
+                <span>작문</span>
+            </fieldset>
+        </form>
+    </div>
+    <div id="div03">
+        <ul>
+            <li class="hot">제품A</li>
+            <li>제품B</li>
+            <li>제품C</li>
+            <li class="hot">제품D</li>
+        </ul>
+
+    </div>
+</body>
+</html>

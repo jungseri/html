@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS선택자</title>
+    <style>
+    /*자손선택자(하위선택자): 상위요소와 하위요소 사이에 공백문자를 사용하는 선택자*/
+    /*상위요소에 포함된 html요소를 뜻함(단계에 관계 없음)
+    하위 요소로 사용할 수 있는 선택자는 태그 선택자, id선택자, class선택자이다.*/
+    /*section p {color : blue; }*/
+
+    /*자식선택자*/
+    /*상위요소에 포함된 요소중 1단계 아래에 있는 html요소 ;'>'를 사용함*/
+    /*하위 요소로 사용할 수 있는 선택자는 태그 선택자, id선택자, class선택자이다. */
+    /*section > p {color : blue; }*/
+
+    /*인접 형제 선택자*/
+    /*지정한 요소와 동일한 단계에 있는 html 요소를 선택하는 선택자 
+    '+'를 사용하여 원하는 요소를 선택함*/
+    /* section + p {color : blue;}*/
+
+    
+    #div01 > div> p {color : blue;}
+    h2{color:red;}
+    h2 + p{color:blue;}
+
+    p + #div01 {background-color: coral;
+    padding: 20px;}
+
+    /*형제 선택자 : 인접 형제 선택자와 같이 동일한 단계에 있는 html 태그요소를 선택하는 선택자
+    '~'사용, 인접 형제 선택자와는 달리 순서에 상관없음*/
+    /* section ~ p {color : blue;}*/
+
+    h1 ~ ul{
+        color: blue;
+        font-weight: bold;
+    }
+
+    p ~ ul{
+        background-color: #ff000f;}/*형제 선택자*/
+    
+    /*속성 선택자 ;지정한 요소의 현재 상태를 확인하여 html 요소를 선택하는 선택자*/
+    /*[속성명]기호를 사용함*/
+    /*section[href] {color : blue;}*/
+    #div03> a[href]{
+        background-color: burlywood;
+    }
+    /*속성 선택자2 ;지정한 요소의 현재 상태를 확인하여 html 요소를 선택하는 선택자*/
+    /*지정한 속성에 특정값을 확인하여 선택하는 선택자
+    [속성명=값] 기호를 사용*/
+   /*section[target="_self"] {color : blue;}*/
+   #div04> a[target="_blank"]{
+       padding-right: 30px;
+       text-decoration:none;
+       font-size:24px
+   }
+
+</style>
+</head>
+<body>
+    <div id="div01">
+        <p>더미태그</p><!--지정한 요소보다 순서가 낮은 요소를 선택함.--><!--p + div {background-color: coral;}-->
+            <div>    
+                <h2>지정할 html 태그</h2>
+                <p>인접 형제 선택할 html태그</p>
+
+            </div>            
+            <p>더미태그2</p>
+    </div>
+
+<div id="div02">
+    <h1>예약방법 및 요금</h1>
+        <ul>
+            <li>직접통화</li>
+            <li>문자남기기</li> 
+        </ul>
+            <ul>
+             <li>1인</li>
+                <li>2인</li> 
+                <li>3인</li>
+            <li>4인</li> 
+        </ul>
+        <br><br><br>
+            <ul>
+                <li>아메리카노</li>
+                <li>카페라뗴</li> 
+                <li>에스프레소</li>             
+            </ul>
+        <p>형제 선택자로 선택할 첫번째 태그요소</p>
+            <ul>
+                <li>바나나</li>
+                <li>파인애플</li> 
+                <li>망고</li>             
+            </ul>
+        <h2>형제 선택자로 선택되지 않을 태그요소</h2>
+            <ul>
+                <li>바나나</li>
+                <li>파인애플</li> 
+                <li>망고</li>             
+            </ul>
+</div>
+<div id="div03">
+    <ul>
+        <!--첫번째 a태그는 href 속성이 없으므로 선택이 안됨-->
+        <li><a>메인메뉴</a>메인</li>
+        <li><a href="#">메인메뉴</a>메인</li>
+        <li><a href="#">메인메뉴</a>메인</li>
+        <li><a href="#">메인메뉴</a>메인</li>
+    </ul>
+<div id="div04">
+    <h3>속성 =값 선택자</h3>
+    <ul>
+        <li><a href="http://www.daum.net"
+            target="_blank">다음홈페이지</a></li>
+        <li><a href="http://www.naver.com"
+            target="_blank">네이버홈페이지</a></li>
+        <li><a href="http://www.google.com"
+            target="_blank">구글홈페이지</a></li>
+    </ul>
+</div>
+
+<br><br>
+<br><br><br><br><br>
+</body>
+
+</html>
