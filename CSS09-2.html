@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        #div01{
+        width: 800px;
+        height: 300px;
+        margin: 0 auto;
+        border: 1px solid black;}
+    #div01 .box{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        border: 1px solid black;}
+
+        /*width: 100px;
+        height: 100px;
+       
+        margin: 0 ;
+        background: blueviolet;
+        position: relative;
+        
+    }*/
+    #div01:hover .box{
+        width: 300px;
+        height: 300px;
+     
+        margin-left: 87%;
+        background-color: cadetblue;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        transition-duration: 3s;
+        
+        }
+
+    </style>
+</head>
+<body>
+    문제1) div 태그를 이용하여 원본 사각형의 크기가 너비 100, 너비 100인 사각형을 생성하고, 마우스가 해당 div의 부모 div에 올라갔을 경우 360도 회전 하면서 우측으로 이동하고,
+    사각형의 크기가 3배 커지는 사각형을 생성하세요.
+    워본 크기 100*100, 회전 360도, 사각형의 색상은 원하는 색상으로 사용(시작 색상과 끝 색상이 달라야함.)
+    기본위치에서 다른 위치로 이동
+    마우스가 부모태그에 hover 상태일때 동작.
+    <div id="div01">
+        <div class="box"><p>box</p></div>
+    </div>
+</body>
+
+</html>
