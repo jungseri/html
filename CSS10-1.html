@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>482페이지</title>
+    <style>
+    
+    .prod-list{
+        list-style: none; /*ul스타일변경*/
+        margin:0;
+        padding:0;
+    }
+
+    .prod-list li{
+        position: relative;
+        /*기본적으로 li이기 때문에, 각 리스트가 세로로 출력되어야 하지만, float를 사용하여 왼쪽으로 붙임.*/
+        float: left;
+        /*li 내부의 영역을 삭제.*/
+        padding: 0;
+       /*다음에 출력될 요소와 최소 10px 띄움.*/
+        margin: 10px;
+        overflow: hidden;
+        /*자식태그가 자신의 영역이상 컸을 경우 화면에 출력하지 않음.*/
+    }
+
+    .prod-list img{
+        margin: 0;
+        padding: 0;
+        float: left;
+        z-index: 5;
+    }
+
+    
+    
+    
+    
+    
+    .prod-list .caption{
+    position: absolute;
+    top: 200px;
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    background: rgba(0,0,0,0.6);
+    opacity:0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index:10;
+    
+    }
+    
+ .prod-list li:hover .caption{
+        opacity: 1;
+        transform: translateY(-200px);
+    }
+
+.prod-list .caption h1, .prod-list .caption p{
+        color : #fff;
+        text-align: center;
+    }   
+
+
+     /*
+   .prod-list .caption{
+    position: absolute;
+    top: 200px;
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    background: rgba(0,0,0,0.6);
+    opacity:0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index:10;
+    
+    }
+    
+ .prod-list li:hover .caption{
+        opacity: 1;
+        transform: translateY(-200px);
+    }
+
+.prod-list .caption h1, .prod-list .caption p{
+        color : #fff;
+        text-align: center;
+    }   
+    */
+     </style>
+</head>
+<body>
+   
+        <h1>신상품 목록</h1>
+        <div id="container">
+        <ul class="prod-list">        
+            <li>
+                <img src="./img_forest.jpg" width="300px;" height="200px;">
+                    <div class="caption">
+                        <h1>상품1 설명테스트</h1>
+                        <p>상품 1 설명 테스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+            </li>
+            <li>
+                <img src="./img_forest.jpg" width="300px;" height="200px;">
+                    <div class="caption">
+                        <h1>상품1 설명테스트</h1>
+                        <p>상품 1 설명 테스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+            </li>
+            <li>
+                <img src="./img_forest.jpg" width="300px;" height="200px;">
+                    <div class="caption">
+                        <h1>상품1 설명테스트</h1>
+                        <p>상품 1 설명 테스트</p>
+                        <p>가격 : 12,345원</p>
+                    </div>
+            </li>
+
+        </ul>
+        
+        </div><!--id=container-->
+    
+</body>
+</html>

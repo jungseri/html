@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS10-연습문제</title>
+</head>
+<style>
+
+    #div01{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 10px;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 5%;
+    }
+    #div01:hover{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5%;
+    background-color: green;
+    border: 1px solid green;
+    animation-duration: 3s;
+    animation-name: background;
+}
+@keyframes background{
+    from{
+        background-color: green;
+        border: 1px solid green;
+    }
+    to{
+        background-color: yellow;
+        border: 1px solid yellow;
+    }
+}
+#div02 .caption{
+    margin: 5;
+    padding: 0;   
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    
+}
+#div02 .caption:hover{
+    
+    animation: imgs 1s normal;
+   
+    
+}
+@keyframes imgs{
+    form{
+        -webkit-transform: rotateZ(0deg); 
+        transform: rotateZ(0deg); 
+        border-radius: 0px;   }
+    to{   
+        transform: rotateZ(20deg); 
+        border-radius: 10px; } 
+              
+                
+           
+}
+#div03 .box:hover{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 200px;  
+    transition: all 1s;
+    animation: box 2s normal infinite;
+    transform-origin: left top;
+}
+@keyframes box{
+form{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 200px; 
+}
+to{
+    margin: 0;
+    padding: 0;
+    transform: scale(1.5,1.5);
+    
+    box-shadow: rgba(0, 0,0,0.3) 5px 5px;
+}
+}
+
+</style>
+<body>
+    <div id="div01">
+        <div class="box"><h3>문제1</h3></div>
+    </div>
+    <br><br><br><br>
+    <div id="div02">
+        <div class="caption"><img src="./img_forest.jpg"  ></div><!--img-->
+    </div><!--div02-->
+    <br><br><br><br> <br><br><br><br> <br><br><br><br>
+    <div id="div03">
+        <div class="box"><img src="./img_5terre.jpg" width="300px;" height="200px"></div>
+    </div>
+    <br><br><br><br>
+</body>
+</html>

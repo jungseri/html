@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS10-연습문제</title>
+</head>
+<style>
+
+.body{
+    padding-top: 50xp;
+    padding-left: 50px;
+    }
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: green;
+    border: 1px solid black;
+    /*사각형의 모서리 처리*/
+    border-radius: 5px;
+    transform: background 5s;
+}
+.box:hover{background: yellow;}
+
+#div02{
+    width: 500px;
+    margin: 50px auto;
+    /*마진을 상하는 px 추가, 좌우측은 중앙 정렬*/
+}
+
+}
+#div02 .img:hover {
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: rotate(20deg);
+}
+
+#div03{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+#div03 .box:hover{
+    transform-origin: left top;
+    transform: scale(1.5);
+    transition: all 1s;
+    box-shadow: 5px 5px black;
+}
+
+/*
+    #div01{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 10px;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 5%;
+    }
+    #div01:hover{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5%;
+    background-color: green;
+    border: 1px solid green;
+    animation-duration: 3s;
+    animation-name: background;
+}
+@keyframes background{
+    from{
+        background-color: green;
+        border: 1px solid green;
+    }
+    to{
+        background-color: yellow;
+        border: 1px solid yellow;
+    }
+}
+#div02 .img:hover{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 200px;    
+    animation: img 1s normal infinite;
+    
+}
+@keyframes img{
+    form{
+        border: none;}
+    to{    
+        border-radius: 10px;      
+        border: 1px solid black;        
+        transform: rotateZ(20deg);}        
+}
+#div03 .box:hover{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 200px;  
+    transition: all 1s;
+    animation: box 2s normal infinite;
+    transform-origin: left top;
+}
+@keyframes box{
+form{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 200px; 
+}
+to{
+    margin: 0;
+    padding: 0;
+    transform: scale(1.5,1.5);
+    
+    box-shadow: rgba(0, 0,0,0.3) 5px 5px;
+}
+}
+*/
+</style>
+<body>
+    <div id="div01">
+        <div class="box"><h3>문제1</h3></div>
+    </div>
+    <br><br><br><br>
+    <div id="div02">
+        <div class="img"><img src="./img_forest.jpg" width="300px;" height="200px;" ></div><!--img-->
+    </div><!--div02-->
+    <br><br><br><br>
+    <div id="div03">
+        <div class="box"><img src="./img_5terre.jpg" width="300px;" height="200px"></div>
+    </div>
+    <br><br><br><br>
+</body>
+</html>
