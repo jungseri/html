@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>미디어쿼리</title>
+    <style>
+    /*미디어쿼리 : CSS3에 도입된 모듈로 사이트에 접속하는 장치에 따라 특정한 CSS스타일을 적용시키는 모듈
+    ; 웹사이트에 접속하는 장치의 화면 크기에 따라 레이아웃을 변경 할 수 있는 기능.*/
+    /*@media 키워드를 사용함. ;
+    주로 미디어쿼리는 가장 CSS구문 가장 아래에 입력함. (CSS는 마지막 속성을 우선시 하기 때문)
+    사용법
+    @media [only|not] 미디어유형 and [조건1] and [조건2] .....{설정할 CSS 구문1 설정할 CSS구문2} 
+    구문 및 조건 여러개(and연산) 사용 가능*/
+    /*연산자
+    and: 조건을 추가할 때 사용*/
+    /*,(쉼표) : 해당 CSS속성을 적용할 조건이 여러개 존재할 경우 사용*/
+    /*only : 미디어 쿼리를 지원하는 웹브라우저에서만 사용하겠다는 의미 , 지정한 미디어 유형에서 사용.*/
+    /*not : 지정하는 미디어 유형을 제외*/
+
+    /*미디어유형*/
+    /*all: 모든 미디어 유형
+    print : 인쇄장치
+    screen: 컴퓨터스크린(스마트폰 스크린 포함)
+    tv: 음성과 영상이 동시 출력되는 TV
+    aural : 음성합성장치(화면을 읽어 소리로 출력하는 장치)
+    braille: 점자표시장치
+    handheld : 패드(pad)처럼 손에 들고다니는 장치
+    projection : 프로젝터
+    tty: 디스플레이 기능이 제한된 장치 
+    embbossed : 점자 프린터*/
+
+    /*미디어 쿼리의 조건
+    width, height : 웹 페이지의 가로, 세로 너비
+    min-width, min-height : 웹페이지의 최소 너비, 최소 높이
+    max-width, max-height : 웹페이지의 최대 너비, 최대 높이
+    */
+
+    /*화면 회전*/
+    /*컴퓨터 모니터나, 태블릿, 스마트폰 사용시, 기기를 세로나 가로로 보는데 웹사이트가 현재 상황을 체크하여 화면을 출력함.*/
+    /*orientation: portait; 단말기 세로방향 orientation: landscape -단말기 가로방향.*/
+    /*화면의 비율에 따라서 화면을 출력하는 방식을 변경*/
+    /*aspect-ratio : 화면비율 가로/화면비율세로
+    min-aspect-ratio: 최소화면비율
+    max-aspect-ratio: 최대화면비율
+    단말기 화면 비율
+    device-aspect-ratio :단말기 화면 비율 가로/세로
+    min-device-aspect-ratio : 단말기 최소 화면 비율
+    max-device-aspect-ratio : 단말기 최대 화면 비율*/
+
+    /*색상당 비트수 : 단말기에서 사용하는 색상 비트수를 미디어 쿼리의 조건을 사용
+    color: 비트수
+    min-color :최소비트수
+    max-colot : 최대비트수*/ 
+    /*color 0일 경우 컬러 색상*/
+    /*color" 1일 경우 최대 2가지 색상 표현 */  
+    /*color" 3일 경우 최대 8가지 색상 표현 */  
+
+/*미디어 쿼리 중 단점 생성하기
+미디어 쿼리 작성시 서로 다른 CSS를 적용 화면 크기를 중단 점이라 함.*/
+
+@
+
+
+body{
+    background: url(./images/bg0.jpg) no-repeat fixed;   
+    background-size: cover;  
+    max-width: 100%;
+    height: auto;
+    
+}
+@media screen and (max-width: 1024px){
+    body{  
+        background : url(./images/bg1.jpg) no-repeat ;
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 768px){
+    body{  
+        background : url(./images/bg2.jpg) no-repeat ;
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 320px){
+    body{  
+        background : url(./images/bg3.jpg) no-repeat ;
+        background-size: cover;
+    }
+}
+
+    </style>
+</head>
+<body>
+ 
+</body>
+</html>

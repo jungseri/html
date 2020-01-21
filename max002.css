@@ -1,0 +1,83 @@
+/*링크 태그를 이용하여 CSS파일 로드*/
+/* 화면의 크기에 따라 로드하는 CSS 파일을 달리함*/
+/* link 태그에 midia 속성을 추가하여 CSS 파일 로드 조건을 입력함.*/
+
+/*스타일 태그를 이용하여 상황별 csS 속성 사용*/
+/*style 태그에 midoa속성을 사용하여 화면의 크리에 따라 CSS속성을 달리함.*/
+
+
+
+/*style태그 내에 미디어 쿼리를 사용하는 방법*/
+/*style 태그내에 미디어 쿼리를 추가하여 상황별로 CSS 속성을 달리함.*/
+
+/*외부 CSS파일에 미디어 쿼리를 사용하는 방법 */
+/*외부 CSS파일 내에 화면을 꾸미는 CSS속성을 입려간 후 아랫쪽에 미디어 쿼리를 작성하여 해당파일을 의도하여 사용.*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(9, 100, 160);}
+#container{
+    width: 320px;
+    margin: 50px auto;}
+.card{
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 20px 10px;
+    border: 1px solid black;
+    background-color: #ffffff;
+}
+.words{
+    position: relative;
+    left: 10px;
+    top:30px;
+    padding: 10px;
+    text-align: center;    
+}
+@media screen and (min-width:768px) and (max-width:1719px){
+    #container{
+        width: 570px;
+        margin: 50px auto;
+    }
+    .card{
+        position: relative;
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        border: 1px solid black;
+        background-color: white;
+    }
+    .words{
+        position: absolute;
+        left: 10px;
+        top: 50px;
+        text-align: center;
+        width: 200px;
+    }    
+}
+
+@media screen and (min-width: 1723px){
+    #container{
+        width: 1710px;
+        margin: 50 auto;
+    }
+    .card{
+        position: relative;
+        float: left;
+        width: 550px;
+        height: 250px;
+        margin: 10px;
+        border: 1px solid black;
+        background-color: white;
+    }
+    .words{
+        position:absolute;
+        left: 10px;
+        top: 50px;
+        text-align: center;
+        width: 200px;
+    }
+}
