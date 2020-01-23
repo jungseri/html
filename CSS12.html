@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 12일차 미디어 쿼리 12번 파일</title>
+
+    <style>
+        /*화면 너비에 따른 디바이스 */
+        /*992px: 고 해상도 컴퓨터 모니터,
+        768px : 픽셀 잉태블릿화면
+        576px : 스마트폰 화면 */
+
+        /*992px이상: 고 해상도 컴퓨터 모니터,
+        768px이상 : 컴퓨터화면
+        576px이하 : 태블릿 화면 
+        576px이하 : 스마트폰 화면 */
+
+        
+        /*주로 나누는 화면크기가 있음. */
+        /*화면 크기에 따라서 배경 색상 변경하기*/ 
+
+        body{
+            background-color: tan;
+            color: white;
+        }
+        
+        @media screen and (max-width: 992px)/*고화질*/
+        {
+        body{
+            background-color: orange;/*CSS가 중요함*/
+            color: white;
+        }
+        }
+
+        @media screen and (max-width: 768px)
+        {
+        body{
+            background-color: darkcyan;
+            color: white;
+        }
+        }
+        
+        @media screen and (max-width:576px)
+        {/*스마트폰*/
+        body{
+            background-color: olive;
+            color: white;
+        }
+        }
+        
+
+        /*뷰폴트 부분이 중요하다. 반드시 있어야 함.*/
+        /*미디어 쿼리 하나 쓸떄마다 우리가 설정해야하는 것들이 하나씩 늘어남.*/
+
+        
+    </style>
+
+</head>
+<body>
+    <h1>화면 너비에 따라 배경 색상 변경하기</h1>
+    <p>화면 너비가 992px 이상이면 고해상도 컴퓨터(노트북) 화면</p>
+    <p>화면 너비가 768px 이상먄 태블릿</p>
+    <p>화면 너비가 768px 이하 태블릿</p>
+    <p>화면 너비가 576px 이하먄 스마트폰</p>
+    <p>대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다.</p>
+
+
+</body>
+
+</html>

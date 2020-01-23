@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 12일차 미디어 쿼리 12-1번 파일</title>
+    <style>
+    /*메뉴를 스마트폰 화면 메뉴로 변경*/
+    #div01 *{
+        box-sizing: border-box;
+    }
+    #div01 > .topnav{
+        overflow: hidden;
+        background-color: darkcyan;
+    }
+
+    #div01 > .topnav a{
+        float: left;
+        display: block; /*원래 a태그는 inline태그라 한줄에 붙일 수 있는데 block을 넣으면 한줄에 하나씩만 넣을 수 있게 바꿈.*/
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;    
+    }
+    #div01 > .topnav a:hover {
+        background-color: darkslategray;
+        color:black;
+    }
+    #div01 > .topnav::after{
+        clear: both;
+        display: table;
+        content:""
+    }
+    @media screen and (max-width: 576px) {
+        #div01 > .topnav a{
+            float: none; 
+            width: 100%;
+        }
+    }
+
+    #div02 *{
+        box-sizing: border-box;    
+    }
+
+    #div02 .row::after{
+        clear: both;
+        display: table;/*표형식으로 들어감 */
+        content: "";
+    }
+    #div02 .column {
+        float: left;
+        width: 25%;
+        padding: 20px;
+    }
+@media screen and (max-width: 768px){ /*두줄에 하나씩 출력*/
+    #div02 .column{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 576px) { /*한줄에 하나씩 출력*/
+    #div02 .column{
+        width: 100%;
+
+    }
+}
+#div03 .hidden{
+background-color: yellowgreen;
+padding: 20px;
+}
+@media screen and (max-width: 576px) { /*한줄에 하나씩 출력*/
+    #div03 .hidden{
+        display: none; /*메뉴바가 PC에는 있다가 스마트 폰에선 사라지는 때 많이 씀 event가 클릭시 움직임. 나중에 자바로 클릭시 숨겨진 페이지 나오는거 표현*/
+        /*opacity: 0.0;
+        visibility: hidden;  다 같은 방법으로 숨기는 거 */
+        width: 100%;
+    }
+}
+#div04 .fontsize{
+    background-color: lightgray;
+    padding: 20px;
+}
+#div04 .fontsize > h1 {
+    font-size: 80px;
+}
+@media screen and (min-width: 576px) { /*한줄에 하나씩 출력*/
+    #div04 .fontsize {
+    font-size: 30px;
+    width: 100%;
+    }
+}
+#div05 *{
+    box-sizing: border-box;
+}
+#div05 .row{
+    display: flex; /*플렉스 박스 사용*/
+    flex-wrap: wrap; /*자동 줄바꿈 사용*/
+}
+#div05 .column{
+flex: 25%;
+padding: 25px;
+}
+}
+/*화면 크기에 따른 이미지 출럭*/
+@media screen and (max-width: 768px) { /*한줄에 하나씩 출력*/
+    #div05 .column: {/*div03 처럼 박스 만들어야하는데 귀찮네*/
+        width: 50%;
+    }
+}
+@media screen and (max-width: 576px) { 
+    #div05 .column: {      
+        flex : 100%;
+        flex-direction: column;
+    }
+}
+/*576px미만일때 h1의 폰트 크기를 30px 로 바꾸세요 */
+
+
+#div06 * {
+    box-sizing: border-box;/*크기를 테두리선 영역까지 주기위해서 */
+    margin: : 0;/*외부 마진값을 없앰*/
+}
+#div06. header{
+text-align: center;
+padding: 35px;
+}
+#div06 main .row{ /**/
+    display: flex;
+    flex-wrap: wrap;/*크가거 길어지게 되면 div같은 html태그가 여러개 있을때 범위가 여러개 있을때 밑으로 내려가는 것 여러줄 사용하는 것.*/
+    padding: 0 4px;
+}
+#div06 main .column{
+    flex: 25%;
+     /*혹시난 float을 사용했을 때랑 같음.*/
+    padding: 0 4px;/*테두리 외곽 영역을 0으로 만듬, 이미지 태그에 whith을 쓰면 전체다 적용하겠다는 듯?*/
+}
+#div06 main img{ /*img는 imline이지만 자동 줄 바꿈적용*/
+   width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    
+}
+@media screen and (max-width: 576px) { /*한줄에 하나씩 출력*/
+    #div06 main .column {
+    flex: 100%;/*flex 박스의 너비를 50%로 지정*/
+    flex-direction: column;
+}
+}
+    </style>
+</head>
+<body>
+<div id="div01">
+    <h2>화면 크기에 따라서 메뉴의 형태 변경</h2>
+    <p>화면의 너비 576px 이상일 경우에는 기본적인 가로메뉴로 출력</p>
+    <p>화면의 너비가 576px 미만일 경우에는 세로형 메뉴로 출력</p>
+
+    <div class="topnav">
+        <a href="#">메뉴1</a>
+        <a href="#">메뉴2</a>
+        <a href="#">메뉴3</a>
+    </div>
+
+    <div id="div02">
+        <h2>화면 크기에 따라서 layout 바꾸기</h2>
+        <div class="row">
+            <div class="column" style="background-color: #aaaaaa">
+                <h2>column1</h2>
+                <p>첫번째 공간</p>
+            </div>
+            <div class="column" style="background-color: #aaaaaa73">
+                <h2>column2</h2>
+                <p>두번째 공간</p>
+            </div>
+            <div class="column" style="background-color: rgba(169, 169, 169, 0.562)">
+                <h2>column3</h2>
+                <p>세번째 공간</p>
+            </div>
+            <div class="column" style="background-color: rgba(169, 169, 169, 0.144)">
+                <h2>column4</h2>
+                <p>네번째 공간</p>
+            </div>
+        </div>
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div id="div03">
+        <h2>화면 너비에 따라서 특정 html 숨기기</h2>
+        <div class="row">
+            <div class="hidden">
+                <h2>숨겨진 html</h2>
+                <p>화면의 너비가 576px미만일 경우 화면에서 숨김.</p>
+            </div>
+            <div class="column">
+                <h2>column2</h2>
+                <p>두번째 공간</p>         
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br>
+<div id="div04">
+    <h2>화면에 따라 폰트 크기 변경</h2>
+    <div class="fontsize">
+        <div class="hidden">
+            <h1>폰트 사이즈가 변경될 글자</h1>
+        </div>
+              <p>화면에 크기에 상관없이 출력될 부분</p>         
+        </div>
+    </div>
+</div>
+</div>
+<br><br><br><br><br><br><br>
+<div id="div05">
+    <h2>플렉스 박스를 사용하여 화면 크기에 따라 공간 설정하기</h2>
+    <div class="row">
+        <div class="column" style="background-color: #aaaaaa">
+                <h2>column1</h2>
+                <p>첫번째 공간</p>
+            </div>
+            <div class="column" style="background-color: #aaaaaa73">
+                <h2>column2</h2>
+                <p>두번째 공간</p>
+            </div>
+            <div class="column" style="background-color: rgba(169, 169, 169, 0.562)">
+                <h2>column3</h2>
+                <p>세번째 공간</p>
+            </div>
+            <div class="column" style="background-color: rgba(169, 169, 169, 0.144)">
+                <h2>column4</h2>
+                <p>네번째 공간</p>
+            </div>
+        </div>
+</div>
+
+
+
+       
+            <p>화면 너비 768px일 이상경우 한줄에 모든 컬럼이 출력됨.</p>
+            <p>화면 너비 768px일 미만경우 한줄에 2개 컬럼이 출력됨.</p>
+            <p>화면 너비 576px일 미만경우 한줄에 1개 컬럼이 출력됨.</p>
+ 
+<div id="div06">
+    <header>
+        <h1>반응형 웹을 적용한 이미지 갤러리</h1>
+        <p>화면의 너비에 따라 이미지를 출력하는 방식이 변경됨</p>
+    </header>
+    <main>
+        <div class="row">
+            <div class="column">
+                <img src="./샘플이미지수정/wedding.jpg" alt="">
+                <img src="./샘플이미지수정/rocks.jpg" alt="">
+                <img src="./샘플이미지수정/falls2.jpg" alt="">
+                <img src="./샘플이미지수정/mist.jpg" alt="">
+                <img src="./샘플이미지수정/mountainskies.jpg" alt="">
+                <img src="./샘플이미지수정/nature.jpg" alt="">
+                <img src="./샘플이미지수정/ocean.jpg" alt="">
+                <img src="./샘플이미지수정/paris.jpg" alt="">
+                <img src="./샘플이미지수정/underwater.jpg" alt="">             
+            </div>
+            <div class="column">
+                <img src="./샘플이미지수정/wedding.jpg" alt="">
+                <img src="./샘플이미지수정/rocks.jpg" alt="">
+                <img src="./샘플이미지수정/falls2.jpg" alt="">
+                <img src="./샘플이미지수정/mist.jpg" alt="">
+                <img src="./샘플이미지수정/mountainskies.jpg" alt="">
+                <img src="./샘플이미지수정/nature.jpg" alt="">
+                <img src="./샘플이미지수정/ocean.jpg" alt="">
+                <img src="./샘플이미지수정/paris.jpg" alt="">
+                <img src="./샘플이미지수정/underwater.jpg" alt="">   
+            </div>
+            <div class="column">
+                <img src="./샘플이미지수정/wedding.jpg" alt="">
+                <img src="./샘플이미지수정/rocks.jpg" alt="">
+                <img src="./샘플이미지수정/falls2.jpg" alt="">
+                <img src="./샘플이미지수정/mist.jpg" alt="">
+                <img src="./샘플이미지수정/mountainskies.jpg" alt="">
+                <img src="./샘플이미지수정/nature.jpg" alt="">
+                <img src="./샘플이미지수정/ocean.jpg" alt="">
+                <img src="./샘플이미지수정/paris.jpg" alt="">
+                <img src="./샘플이미지수정/underwater.jpg" alt="">   
+            </div>
+            <div class="column">
+                <img src="./샘플이미지수정/wedding.jpg" alt="">
+                <img src="./샘플이미지수정/rocks.jpg" alt="">
+                <img src="./샘플이미지수정/falls2.jpg" alt="">
+                <img src="./샘플이미지수정/mist.jpg" alt="">
+                <img src="./샘플이미지수정/mountainskies.jpg" alt="">
+                <img src="./샘플이미지수정/nature.jpg" alt="">
+                <img src="./샘플이미지수정/ocean.jpg" alt="">
+                <img src="./샘플이미지수정/paris.jpg" alt="">
+                <img src="./샘플이미지수정/underwater.jpg" alt="">   
+            </div>
+
+        </div>
+    </main>
+</div>
+</body>
+</html>

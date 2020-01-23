@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+  
+*{box-sizing: border-box;}/*테두리 선까지 크기로 해서 값을 매기기위해 씀.*/
+
+header{    
+    padding: 15px;/*상하좌우 테두리선과 내부 컨텐츠 영역과의 기본공간을 상하좌우에 15px씩 줌.*/
+    color:white;
+    background-color: blueviolet;    
+}
+main::after{
+clear: both;
+display: table;
+content:"";
+}
+/*자식 태그를 float속성을 사용했을 경우 float속성을 삭제하기위한 공식*/
+
+aside{
+    float: left;  
+    width: 25%; 
+    padding: 15px 0;
+   
+  }
+section{
+    float: left;
+    padding: 15px;
+    width: 50%;
+}
+.menu ul{
+    list-style-type: none ;
+    margin: 0;
+    padding: 0;
+}
+/*CSS선택자 중에 공백문자('')는 자손선택자임*/
+.menu li{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: darkcyan; 
+    color : white;
+    font-size: 20px;  }   
+
+.right{
+    background-color: darkcyan;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 700px){
+    aside{
+        width: 100%;
+    }
+    section{
+        width: 100%;
+    }
+}
+
+footer{
+    color : white;
+    text-align: center;
+    background-color: darkcyan;
+    padding: 15px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chania</h1>
+    </header>
+        <main>
+            <aside class="menu">
+                <ul>
+                    <li class="box">the flight</li>
+                    <li class="box">the city</li>
+                    <li class="box">the island</li>
+                    <li class="box">the food</li>
+                </ul>               
+            </aside>
+
+            <section>
+                <h1>the city</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</p>
+            </section>
+
+            <aside>  
+            
+                <div class="right">      <!--띄워쓰려고 div넣음-->            
+                    <h2>what?</h2>
+                    <p>Lorem ipsum dolor sit amet, dolore magna aliqua.</p>
+                    <h2>where?</h2>
+                    <p>Lorem ipsum dolor sit amet, dolore magna aliqua.</p>
+                    <h2>how?</h2>
+                    <p>Lorem ipsum dolor sit amet, dolore magna aliqua.</p> 
+                </div>                   
+            </aside>
+            </main>
+            <footer>                
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>               
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+</html>
